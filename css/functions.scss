@@ -1,0 +1,39 @@
+@use "sass:math";
+
+@function round($x, $digits)
+{
+	$p : math.pow(10, $digits);
+	@return math.div(math.round($x * $p), $p);
+}
+
+@function toRem($x, $base: 16)
+{
+	@return ratio($x, $base) * 1rem;
+}
+
+@function ratio($a, $b)
+{
+	@return math.div($a, $b);
+}
+
+@function clampify(
+	$min_size,
+	$max_size,
+	$min_vp: 375,
+	$max_vp: 1440,
+	$digits: 4
+)
+{
+	$var_part : math.div($max_size - $min_size, $max_vp - $min_vp);
+	$const_part : round(math.div($max_size - $max_vp * $var_part, 16), $digits);
+	$operator : "\+";
+
+	@if $const_part == 0
+	{
+		$const_part : "";
+	}
+	$min_size : round(toRem($min_size), $digits);
+	$max_size : round(toRem($max_size), $digits);
+
+	@return "clamp(#{$min_size}, #{$const_part}rem \+ #{round($var_part * 100, $digits)}vw, #{$max_size})";
+}
