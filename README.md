@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/single-page-design-portfolio-razouck-VcbtlIVQMC)
+- [Live Site URL](https://razouck.github.io/single-page-design-portfolio/)
 
 ## My process
 
@@ -44,4 +44,4 @@ Users should be able to:
 ## Author
 
 - GitHub - [@razouck](https://www.github.com/razouck)
-- Frontend Mentor - [@razouck](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@razouck](https://www.frontendmentor.io/profile/razouck)
